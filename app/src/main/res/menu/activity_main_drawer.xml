@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+        android:id="@+id/nav_Inicio"
+        android:icon="@drawable/ic_pot_mix_grey600_36dp"
+        android:title="@string/inicio" />
+        <item
+            android:id="@+id/nav_Categorias"
+            android:icon="@drawable/ic_food_fork_drink_grey600_36dp"
+            android:title="@string/Categorias" />
+        <item
+            android:id="@+id/nav_cuenta"
+            android:icon="@drawable/ic_account_grey600_36dp"
+            android:title="@string/Cuenta" />
+        <item
+            android:id="@+id/nav_favoritos"
+            android:icon="@drawable/ic_heart_grey600_36dp"
+            android:title="@string/Favoritos" />
+        <item
+            android:id="@+id/nav_configuracion"
+            android:icon="@drawable/ic_bell_grey600_36dp"
+            android:title="@string/Configuracion" />
+    </group>
+
+
+
+</menu>
