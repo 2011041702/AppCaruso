@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorfondo">
+
+
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/imageDetalle"
+            android:scaleType="centerCrop"
+            android:contentDescription=""
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TextNombDetalle"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="25dp"
+            android:textStyle="normal|bold|italic"
+            android:textColor="@color/cardview_light_background"
+            android:shadowColor="#000"
+            android:shadowDx="-2"
+            android:shadowDy="-2"
+            android:shadowRadius="1"
+            android:textSize="18sp"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TextCatDetalle"
+            android:layout_marginTop="180dp"
+            android:layout_marginLeft="25dp"
+            android:textStyle="normal|bold|italic"
+            android:textColor="@color/cardview_light_background"
+            android:shadowColor="#000"
+            android:shadowDx="-2"
+            android:shadowDy="-2"
+            android:shadowRadius="1"
+            android:textSize="18sp"
+            tools:ignore="RtlHardcoded" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/imageDetalle"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:padding="16dp"
+            android:background="@color/colorfondo">
+
+            <TextView
+                android:text="@string/descripci_n"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:textSize="17sp"
+                android:textColor="@color/cardview_light_background"
+                android:textStyle="normal|bold|italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TextDescripcion"
+                android:layout_marginTop="10dp"
+                android:textSize="17sp"
+                android:textAlignment="textStart"
+                android:textColor="@color/cardview_light_background"
+                android:textStyle="normal|bold|italic" />
+
+            <TextView
+                android:text="@string/precio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textSize="17sp"
+                android:textStyle="normal|bold|italic"
+                android:textColor="@color/cardview_light_background" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:text="@string/s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView8"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView10"
+                    android:layout_weight="1"
+                    android:textSize="17sp"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="@color/cardview_light_background" />
+
+            </LinearLayout>
+
+            <TextView
+                android:text="@string/cantidad"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/textView11"
+                android:textStyle="normal|bold|italic"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="17sp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner2"
+                android:layout_marginTop="5dp"
+                android:spinnerMode="dialog"
+                android:scrollbarSize="25dp"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                android:dropDownWidth="match_parent"
+                android:background="@android:drawable/spinner_dropdown_background" />
+
+            <Button
+                android:text="Añadir a Carrito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_heart_grey600_36dp"
+                android:id="@+id/button"
+                android:textAllCaps="false"
+                android:paddingLeft="90dp"
+                android:paddingRight="90dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

@@ -103,6 +103,11 @@
             android:text="@string/reg_cuenta"
             android:textColor="@android:color/white"
             android:background="@color/colorPrimary"/>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox4"
+            android:button="@drawable/borders_circle" />
 
     </LinearLayout>
 </ScrollView>

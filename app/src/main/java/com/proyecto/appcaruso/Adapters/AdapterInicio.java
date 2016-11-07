@@ -7,9 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.proyecto.appcaruso.Class.Productos;
+import com.proyecto.appcaruso.Conecction.Config;
 import com.proyecto.appcaruso.R;
 
 import java.util.List;
@@ -19,6 +21,7 @@ public class AdapterInicio extends RecyclerView.Adapter<AdapterInicio.ViewHolder
     private Context context;
     private List<Productos> productoses;
     private EscuchaEventosClick escucha;
+    private Config config;
 
     public interface EscuchaEventosClick {
         void onItemClick(ViewHolder holder, int posicion);
@@ -27,10 +30,12 @@ public class AdapterInicio extends RecyclerView.Adapter<AdapterInicio.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public ImageView imgee;
+        public TextView textinicio;
 
         public ViewHolder(View itemView) {
             super(itemView);
             imgee = (ImageView) itemView.findViewById(R.id.ImageInicio);
+            textinicio = (TextView) itemView.findViewById(R.id.txtnom_ini);
             itemView.setOnClickListener(this);
         }
 
@@ -63,11 +68,12 @@ public class AdapterInicio extends RecyclerView.Adapter<AdapterInicio.ViewHolder
         Productos prom = productoses.get(position);
 
         Glide.with(context)
-                .load("http://192.168.0.16:9000"+ prom.getImagen())
+                .load("http://192.168.0.10:9000"+ prom.getImagen())
                 .crossFade()
                 .centerCrop()
 
                 .into(holder.imgee);
+        holder.textinicio.setText(prom.getNombre());
     }
 
 }

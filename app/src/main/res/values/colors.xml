@@ -3,5 +3,8 @@
     <color name="colorPrimary">#C81A1B</color>
     <color name="colorPrimaryDark">#851112</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorBackGroundScreen">#C81A1B</color>
+    <color name="colorBackGroundScreen">#c81a1b</color>
+    <color name="colorborder">#EF5350</color>
+    <color name="colorfondo">#d32f2f</color>
+    <color name="colorletra">#e0e0e0</color>
 </resources>

@@ -3,6 +3,9 @@ package com.proyecto.appcaruso.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -49,7 +52,7 @@ public class Fragment_Inicio extends Fragment implements AdapterInicio.EscuchaEv
         recyclerView = (RecyclerView)v.findViewById(R.id.recycler_inicio);
 
         recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager = new GridLayoutManager(getActivity(),2);
         recyclerView.setLayoutManager(layoutManager);
 
         productosList = new ArrayList<>();
@@ -102,6 +105,8 @@ public class Fragment_Inicio extends Fragment implements AdapterInicio.EscuchaEv
 
     @Override
     public void onItemClick(AdapterInicio.ViewHolder holder, int posicion) {
-
+        String id = productosList.get(posicion).getId();
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.content_main, Fragment_Detalle.createInstance(id), "Fragment_Detalle").addToBackStack("tag").commit();
     }
 }

@@ -1,24 +1,22 @@
 package com.proyecto.appcaruso.Conecction;
 
-/**
- * Created by Christian on 07/10/2016.
- */
+
 
 public class Config {
 
-    private static final String IP = "http://192.168.0.16";
+    private static final String IP = "http://192.168.0.10";
     public static final String PRODUCTOS = IP + ":9000/Caruso/WebServices/Productos.php";
     public static final String CATEGORIAS = IP + ":9000/Caruso/WebServices/Categorias.php";
     public static final String LOGIN_URL = IP + ":9000/Caruso/WebServices/Login.php";
     public static final String USUARIO = IP + ":9000/Caruso/WebServices/Usuario.php?email=";
-
     public static final String URL_ADD= IP + ":9000/Caruso/WebServices/UsuarioRegistro.php";
-
+    public static final String PROD_DETALLE= IP + ":9000/Caruso/WebServices/ProductoDetalle.php?id=";
 
     public static final String TAG_ID = "id";
     public static final String TAG_NOMBRE = "nombre";
     public static final String TAG_PRE = "precio";
     public static final String TAG_IMG = "imagen";
+    public static final String TAG_DESCRIPCION = "descripcion";
 
 
     public static final String TAG_NAME = "nombre";
@@ -27,6 +25,8 @@ public class Config {
     public static final String TAG_TELEFONO = "telefono";
     public static final String TAG_EMAIL = "email";
     public static final String TAG_PASSWORD = "password";
+    public static final String TAG_CATEGORIA = "categoria";
+
 
 
     public static final String KEY_USU_NOMBRE = "nomb";
@@ -35,6 +35,8 @@ public class Config {
     public static final String KEY_USU_TELEFONO = "telefono";
     public static final String KEY_USU_EMAIL = "email";
     public static final String KEY_USU_PASS = "password";
+
+
 
 
     public static final String TAG_JSON_ARRAY="result";

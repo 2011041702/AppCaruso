@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AppCaruso</string>
+    <string name="app_name">DonCaruso</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -27,4 +27,16 @@
     <string name="reg_cuenta">Crear Cuenta</string>
     <string name="modificar">Modificar Datos</string>
     <string name="logout">Cerrar Sesión</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="precio">Precio</string>
+    <string name="s">S/.</string>
+
+    <string-array name="cantidad">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
 </resources>
