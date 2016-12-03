@@ -15,13 +15,9 @@
             android:icon="@drawable/ic_account_grey600_36dp"
             android:title="@string/Cuenta" />
         <item
-            android:id="@+id/nav_favoritos"
-            android:icon="@drawable/ic_heart_grey600_36dp"
-            android:title="@string/Favoritos" />
-        <item
-            android:id="@+id/nav_configuracion"
-            android:icon="@drawable/ic_bell_grey600_36dp"
-            android:title="@string/Configuracion" />
+            android:id="@+id/nav_mis_pedidos"
+            android:icon="@drawable/ic_cart_plus_grey600_36dp"
+            android:title="@string/Pedidos" />
     </group>
 
 

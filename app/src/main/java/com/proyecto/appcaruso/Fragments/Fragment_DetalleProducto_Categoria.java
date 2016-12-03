@@ -22,7 +22,6 @@ import com.bumptech.glide.Glide;
 import com.proyecto.appcaruso.Conecction.Config;
 import com.proyecto.appcaruso.Conecction.RequestHandler;
 import com.proyecto.appcaruso.R;
-import com.proyecto.appcaruso.activities.mainactivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,7 +30,9 @@ import org.json.JSONObject;
 import java.util.HashMap;
 
 
-public class Fragment_Detalle extends Fragment implements View.OnClickListener {
+
+public class Fragment_DetalleProducto_Categoria extends Fragment implements View.OnClickListener{
+
 
     private ImageView imageDetalle;
     private TextView TextNombDetalle, TextCatDetalle,TextDescripcion,TextPrecio;
@@ -43,11 +44,13 @@ public class Fragment_Detalle extends Fragment implements View.OnClickListener {
     private String extra;
     private static final String EXTRA_ID = "IDMETA";
 
-    public Fragment_Detalle() {
+
+    public Fragment_DetalleProducto_Categoria() {
     }
 
-    public static Fragment_Detalle createInstance(String id) {
-        Fragment_Detalle detailFragment = new Fragment_Detalle();
+
+    public static Fragment_DetalleProducto_Categoria createInstance(String id) {
+        Fragment_DetalleProducto_Categoria detailFragment = new Fragment_DetalleProducto_Categoria();
         Bundle bundle = new Bundle();
         bundle.putString(EXTRA_ID, id);
         detailFragment.setArguments(bundle);
@@ -57,7 +60,7 @@ public class Fragment_Detalle extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_detalle, container, false);
+        View v = inflater.inflate(R.layout.fragment_detalle_producto_categoria, container, false);
         extra = getArguments().getString(EXTRA_ID);
 
         imageDetalle = (ImageView)v.findViewById(R.id.imageDetalle);
@@ -66,7 +69,7 @@ public class Fragment_Detalle extends Fragment implements View.OnClickListener {
         TextDescripcion = (TextView)v.findViewById(R.id.TextDescripcion);
         TextPrecio = (TextView)v.findViewById(R.id.TextPrecio);
         carrito = (Button)v.findViewById(R.id.btncarrito);
-        spinner = (Spinner)v.findViewById(R.id.spinner2);
+        spinner = (Spinner)v.findViewById(R.id.spinner_cantidad);
 
 
         carrito.setOnClickListener(this);
@@ -218,4 +221,5 @@ public class Fragment_Detalle extends Fragment implements View.OnClickListener {
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
+
 }

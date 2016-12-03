@@ -1,5 +1,6 @@
-package com.proyecto.appcaruso.Activitys;
+package com.proyecto.appcaruso.activities;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -7,19 +8,23 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.proyecto.appcaruso.Fragments.FragmentPager;
 import com.proyecto.appcaruso.Fragments.Fragment_Categorias;
 import com.proyecto.appcaruso.Fragments.Fragment_Inicio;
+import com.proyecto.appcaruso.Fragments.Fragment_Pedidos;
 import com.proyecto.appcaruso.R;
 
-public class MainActivity extends AppCompatActivity {
+public class mainactivity extends AppCompatActivity {
 
     DrawerLayout drawer;
+    public TextView ddd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,18 +38,14 @@ public class MainActivity extends AppCompatActivity {
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+
+        ddd = (TextView) findViewById(R.id.idToolbar);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         if (navigationView != null) {
             prepararDrawer(navigationView);
-            // Seleccionar item por defecto
             seleccionarItem(navigationView.getMenu().getItem(0));
         }
-
-
-
-
     }
-
     private void prepararDrawer(NavigationView navigationView) {
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
@@ -58,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
                 });
 
     }
-
     private void seleccionarItem(MenuItem itemDrawer) {
         Fragment fragmentoGenerico = null;
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -66,20 +66,24 @@ public class MainActivity extends AppCompatActivity {
         switch (itemDrawer.getItemId()) {
             case R.id.nav_Inicio:
                 fragmentManager.popBackStack();
+                ddd.setText("Inicio");
                 fragmentoGenerico = new Fragment_Inicio();
                 break;
             case R.id.nav_Categorias:
                 fragmentManager.popBackStack();
+                ddd.setText("Categoria");
                 fragmentoGenerico = new Fragment_Categorias();
                 break;
             case R.id.nav_cuenta:
                 fragmentManager.popBackStack();
+                ddd.setText("Mi Cuenta");
                 fragmentoGenerico = new FragmentPager();
                 break;
-            /*case R.id.nav_manage:
+            case R.id.nav_mis_pedidos:
                 fragmentManager.popBackStack();
-                fragmentoGenerico = new fragment_mis_pedidos();
-                break;*/
+                ddd.setText("Mis Pedidos");
+                fragmentoGenerico = new Fragment_Pedidos();
+                break;
         }
         if (fragmentoGenerico != null) {
             fragmentManager
@@ -89,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Setear título actual
-        setTitle(itemDrawer.getTitle());
+        //setTitle(itemDrawer.getTitle());
     }
 
     @Override
@@ -105,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        //getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -122,5 +126,37 @@ public class MainActivity extends AppCompatActivity {
         }*/
 
         return super.onOptionsItemSelected(item);
+    }
+    /*@Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Dialogo();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }*/
+
+    private void Dialogo() {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setMessage("¿Esta seguro de quere salir de la aplicación?");
+        alertDialogBuilder.setPositiveButton("Si",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        System.exit(0);
+                    }
+                });
+
+        alertDialogBuilder.setNegativeButton("No",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface arg0, int arg1) {
+
+                    }
+                });
+
+        //Showing the alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
     }
 }

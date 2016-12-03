@@ -118,28 +118,19 @@ public class Fragment_Cuenta extends Fragment implements View.OnClickListener{
                     @Override
                     public void onClick(DialogInterface arg0, int arg1) {
 
-                        //Getting out sharedpreferences
                         SharedPreferences preferences = getActivity().getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
-                        //Getting editor
+
                         SharedPreferences.Editor editor = preferences.edit();
 
-                        //Puting the value false for loggedin
                         editor.putBoolean(Config.LOGGEDIN_SHARED_PREF, false);
 
-                        //Putting blank value to email
                         editor.putString(Config.EMAIL_SHARED_PREF, "");
 
-                        //Saving the sharedpreferences
                         editor.apply();
 
-                        //Starting login activity
-                        /*Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent);*/
                         FragmentPager frag = new FragmentPager();
 
                         FragmentManager fragmentManager = getFragmentManager();
-                        //FragmentTransaction transaction = fragmentManager.beginTransaction();
                         fragmentManager.popBackStack();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_main, frag)

@@ -25,9 +25,7 @@ import com.proyecto.appcaruso.R;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Christian on 07/10/2016.
- */
+
 
 public class Fragment_Login extends Fragment implements View.OnClickListener {
 
@@ -120,16 +118,11 @@ public class Fragment_Login extends Fragment implements View.OnClickListener {
         super.onResume();
 
         SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences(Config.SHARED_PREF_NAME,Context.MODE_PRIVATE);
-
         loggedIn = sharedPreferences.getBoolean(Config.LOGGEDIN_SHARED_PREF, false);
-
-
         if(loggedIn){
-
             Fragment_Cuenta frag = new Fragment_Cuenta();
 
             FragmentManager fragmentManager = getFragmentManager();
-            //FragmentTransaction transaction = fragmentManager.beginTransaction();
             fragmentManager.beginTransaction()
                     .replace(R.id.content_main, frag)
                     .commit();

@@ -1,8 +1,6 @@
 package com.proyecto.appcaruso.Class;
 
-/**
- * Created by Christian on 07/10/2016.
- */
+
 
 public class Productos {
 

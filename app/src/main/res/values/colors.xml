@@ -7,4 +7,5 @@
     <color name="colorborder">#EF5350</color>
     <color name="colorfondo">#d32f2f</color>
     <color name="colorletra">#e0e0e0</color>
+    <color name="colorbutton">#8bc34a</color>
 </resources>

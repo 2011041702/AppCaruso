@@ -1,6 +1,5 @@
 package com.proyecto.appcaruso.Adapters;
 
-
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,7 +15,9 @@ import com.proyecto.appcaruso.R;
 
 import java.util.List;
 
-public class AdapterInicio extends RecyclerView.Adapter<AdapterInicio.ViewHolder> {
+
+
+public class AdapterCategoriaProducto extends RecyclerView.Adapter<AdapterCategoriaProducto.ViewHolder> {
 
     private Context context;
     private List<Productos> productoses;
@@ -34,8 +35,8 @@ public class AdapterInicio extends RecyclerView.Adapter<AdapterInicio.ViewHolder
 
         public ViewHolder(View itemView) {
             super(itemView);
-            imgee = (ImageView) itemView.findViewById(R.id.ImageInicio);
-            textinicio = (TextView) itemView.findViewById(R.id.txtnom_ini);
+            imgee = (ImageView) itemView.findViewById(R.id.ImagenCategoriaProducto);
+            textinicio = (TextView) itemView.findViewById(R.id.txtNombreCategoriaProducto);
             itemView.setOnClickListener(this);
         }
 
@@ -46,7 +47,7 @@ public class AdapterInicio extends RecyclerView.Adapter<AdapterInicio.ViewHolder
     }
 
 
-    public AdapterInicio(List<Productos> productoses, Context context, EscuchaEventosClick escucha) {
+    public AdapterCategoriaProducto(List<Productos> productoses, Context context, EscuchaEventosClick escucha) {
         this.productoses = productoses;
         this.context = context;
         this.escucha = escucha;
@@ -59,19 +60,17 @@ public class AdapterInicio extends RecyclerView.Adapter<AdapterInicio.ViewHolder
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.items_inicio, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_categoria_producto, parent, false);
         return new ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Productos prom = productoses.get(position);
-
         Glide.with(context)
                 .load( Config.IP + prom.getImagen())
                 .crossFade()
                 .centerCrop()
-
                 .into(holder.imgee);
         holder.textinicio.setText(prom.getNombre());
     }

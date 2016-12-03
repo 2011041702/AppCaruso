@@ -10,7 +10,7 @@
     <string name="slideshow">Slideshow</string>
     <string name="tools">Tools</string>
     <string name="Cuenta">Mi Cuenta</string>
-    <string name="Favoritos">Mis Favoritos</string>
+    <string name="Pedidos">Mis Pedidos</string>
     <string name="Configuracion">Configuración</string>
     <string name="Categorias">Categorias</string>
     <string name="Registro">Crear cuenta</string>
@@ -31,6 +31,17 @@
     <string name="descripci_n">Descripción</string>
     <string name="precio">Precio</string>
     <string name="s">S/.</string>
+    <string name="no_se_ha_encontrado_pedido_alguno">No se ha encontrado, pedido alguno</string>
+    <string name="unidades">Unidades</string>
+    <string name="sss">S/.</string>
+    <string name="nuevos_soles">nuevos soles</string>
+    <string name="comprar">COMPRAR</string>
+    <string name="Nombre">Nombre</string>
+    <string name="direccion">Dirección</string>
+    <string name="NroLoteo">Nro/Lote</string>
+    <string name="Urbanizacion">Urbanización</string>
+    <string name="Referencia">Referencia</string>
+    <string name="Continuar">Continuar</string>
 
     <string-array name="cantidad">
         <item>1</item>
@@ -38,5 +49,18 @@
         <item>3</item>
         <item>4</item>
         <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
     </string-array>
+
+    <string-array name="distritos">
+        <item>Ciudad Nueva</item>
+        <item>Gregorio Albarracin</item>
+        <item>Pocollay</item>
+        <item>Leguia</item>
+    </string-array>
+
 </resources>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="0dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:cardElevation="7dp"
+        app:cardBackgroundColor="@color/colorfondo">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_height="match_parent"
+                android:id="@+id/ImagePedidosImagen"
+                android:layout_weight="0.90"
+                android:layout_width="160dp"
+                android:contentDescription=""
+                tools:ignore="ContentDescription,InefficientWeight" />
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="182dp"
+                android:layout_height="match_parent"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TextPedidoTitulo"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TextPedidoCantidad"
+                    android:layout_alignBaseline="@+id/TextView99"
+                    android:layout_alignBottom="@+id/TextView99"
+                    android:layout_toRightOf="@+id/TextView99"
+                    android:layout_toEndOf="@+id/TextView99"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="@color/cardview_light_background"
+                    android:layout_marginLeft="5dp"
+                    tools:ignore="RtlHardcoded"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:text="Cantidad:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TextView99"
+                    android:layout_marginTop="27dp"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="@color/cardview_light_background"
+                    android:layout_below="@+id/TextPedidoTitulo"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    tools:ignore="HardcodedText"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:text="@string/unidades"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/TextPedidoCantidad"
+                    android:layout_toRightOf="@+id/TextPedidoCantidad"
+                    android:layout_toEndOf="@+id/TextPedidoCantidad"
+                    android:id="@+id/textView7"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="@color/cardview_light_background"
+                    android:layout_marginLeft="5dp"
+                    tools:ignore="RtlHardcoded"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:text="@string/sss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:id="@+id/textView6"
+                    android:layout_below="@+id/TextView99"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TextPedidoPrecio"
+                    android:layout_alignBaseline="@+id/textView6"
+                    android:layout_alignBottom="@+id/textView6"
+                    android:layout_toRightOf="@+id/textView6"
+                    android:layout_toEndOf="@+id/textView6"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:text="@string/nuevos_soles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/TextPedidoPrecio"
+                    android:layout_toRightOf="@+id/TextPedidoPrecio"
+                    android:layout_toEndOf="@+id/TextPedidoPrecio"
+                    android:id="@+id/textView9"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="@color/cardview_light_background"
+                    tools:ignore="RtlHardcoded"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

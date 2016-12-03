@@ -4,13 +4,12 @@ package com.proyecto.appcaruso.Fragments;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -39,6 +38,7 @@ public class Fragment_Inicio extends Fragment implements AdapterInicio.EscuchaEv
     private RecyclerView.Adapter adapter;
     private RequestQueue requestQueue;
     private int requestCount = 1;
+
 
 
     public Fragment_Inicio() {

@@ -14,8 +14,6 @@ import com.proyecto.appcaruso.R;
 
 public class FragmentPager extends Fragment implements TabLayout.OnTabSelectedListener {
 
-
-    //This is our tablayout
     private TabLayout tabLayout;
 
     //This is our viewPager

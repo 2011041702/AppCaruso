@@ -126,7 +126,7 @@
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/spinner2"
+                android:id="@+id/spinner_cantidad"
                 android:layout_marginTop="5dp"
                 android:spinnerMode="dialog"
                 android:scrollbarSize="25dp"

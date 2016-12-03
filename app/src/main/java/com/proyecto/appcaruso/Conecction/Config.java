@@ -4,13 +4,24 @@ package com.proyecto.appcaruso.Conecction;
 
 public class Config {
 
-    private static final String IP = "http://192.168.0.10";
-    public static final String PRODUCTOS = IP + ":9000/Caruso/WebServices/Productos.php";
-    public static final String CATEGORIAS = IP + ":9000/Caruso/WebServices/Categorias.php";
-    public static final String LOGIN_URL = IP + ":9000/Caruso/WebServices/Login.php";
-    public static final String USUARIO = IP + ":9000/Caruso/WebServices/Usuario.php?email=";
-    public static final String URL_ADD= IP + ":9000/Caruso/WebServices/UsuarioRegistro.php";
-    public static final String PROD_DETALLE= IP + ":9000/Caruso/WebServices/ProductoDetalle.php?id=";
+    public static String IP = "http://192.168.1.8:9000";
+
+    public static String PRODUCTOS = IP + "/Caruso/WebServices/Productos.php";
+    public static String CATEGORIAS = IP + "/Caruso/WebServices/Categorias.php";
+    public static String LOGIN_URL = IP + "/Caruso/WebServices/Login.php";
+    public static String USUARIO = IP + "/Caruso/WebServices/Usuario.php?email=";
+    public static String URL_ADD= IP + "/Caruso/WebServices/UsuarioRegistro.php";
+    public static String PROD_DETALLE= IP + "/Caruso/WebServices/ProductoDetalle.php?id=";
+    public static String PEDIDOS= IP + "/Caruso/WebServices/AgregarPedidos.php";
+    public static String MIS_PEDIDOS= IP + "/Caruso/WebServices/Pedidos.php?cliente=";
+    public static String TOTAL= IP + "/Caruso/WebServices/Total.php?cliente=";
+    public static String ENVIOS = IP + "/Caruso/WebServices/Envios.php";
+    public static String ESTADO = IP + "/Caruso/WebServices/Estados.php";
+
+
+    public static String PRODUCTOS_CATEGORIA = IP + "/Caruso/WebServices/ListarProductos_Categoria.php?categoria=";
+
+    
 
     public static final String TAG_ID = "id";
     public static final String TAG_NOMBRE = "nombre";
@@ -26,6 +37,7 @@ public class Config {
     public static final String TAG_EMAIL = "email";
     public static final String TAG_PASSWORD = "password";
     public static final String TAG_CATEGORIA = "categoria";
+    public static final String TAG_TOTAL = "total";
 
 
 
@@ -36,26 +48,35 @@ public class Config {
     public static final String KEY_USU_EMAIL = "email";
     public static final String KEY_USU_PASS = "password";
 
+    public static final String KEY_EMP_CLI = "cliente";
+    public static final String KEY_EMP_PROD = "producto";
+    public static final String KEY_EMP_CANT = "cantidad";
+    public static final String KEY_EMP_PREC = "precio";
+    public static final String KEY_EMP_SUB = "subtotal";
+    public static final String KEY_EMP_IMG = "imagen";
 
+
+    public static final String KEY_ENV_nombre = "nombre";
+    public static final String KEY_ENV_telefono = "telefono";
+    public static final String KEY_ENV_direccion = "direccion";
+    public static final String KEY_ENV_refe = "refe";
+    public static final String KEY_ENV_distrito = "distrito";
+    public static final String KEY_ENV_observaciones = "observaciones";
+
+    public static final String KEY_EST_CLIENTE = "cliente";
 
 
     public static final String TAG_JSON_ARRAY="result";
 
-    //Keys for email and password as defined in our $_POST['key'] in login.php
     public static final String KEY_EMAIL = "email";
     public static final String KEY_PASSWORD = "password";
 
-    //If server response is equal to this that means login is successful
     public static final String LOGIN_SUCCESS = "success";
 
-    //Keys for Sharedpreferences
-    //This would be the name of our shared preferences
     public static final String SHARED_PREF_NAME = "myloginapp";
 
-    //This would be used to store the email of current logged in user
     public static final String EMAIL_SHARED_PREF = "email";
 
-    //We will use this to store the boolean in sharedpreference to track user is loggedin or not
     public static final String LOGGEDIN_SHARED_PREF = "loggedin";
 
 }
