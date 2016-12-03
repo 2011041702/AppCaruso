@@ -117,7 +117,7 @@ public class mainactivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+        // as you specify a parent activity in AndroidManifest.xml.s
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
